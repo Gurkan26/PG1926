@@ -1,0 +1,47 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Asal Sayı bulma</title>
+</head>
+ 
+<body>
+	<h2>Asal Sayı Kontrol</h2>
+	<input placeholder="Sayıyı Girin" type="text" id="txtSayi">
+	<button id="btn">Öğren</button>
+	<div id="sonuc"></div>
+	
+	<script>
+		function Hesapla()
+		{
+			var text="";
+			var sayac=0;
+			var sayi=Number(document.getElementById("txtSayi").value);
+			
+			for(i=2; i<sayi; i++)
+			 {
+				if(sayi%i==0)
+				{
+				sayac++;
+				}
+			 }
+				if(sayac==0)
+				{
+				window.alert("Sayı Asal");
+				}
+				else
+				{
+                    window.alert("Sayı Asal DEĞİL");
+				}
+ 
+			document.getElementById("sonuc").innerHTML=text;
+		}
+		
+		var hesapBtn=document.getElementById("btn");
+		hesapBtn.onclick=Hesapla;
+		
+	</script>
+	
+</body>
+</html>
